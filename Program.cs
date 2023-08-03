@@ -120,10 +120,11 @@ internal class Program
             Boolean check = false;
             foreach (var key in MyDictionary.Keys)
             {
-                Console.WriteLine("--->"+ key);
-                Console.WriteLine("+++"+ SearchTerm);
-                if (key == SearchTerm){
-                
+                Console.WriteLine("--->" + key);
+                Console.WriteLine("+++" + SearchTerm);
+                if (key == SearchTerm)
+                {
+
                     check = true;
                     break;
 
@@ -131,7 +132,7 @@ internal class Program
             }
             return check;
             //     if (MyDictionary.ContainsKey(SearchTerm)){
-                
+
             //     return true;
 
             //     }
@@ -143,15 +144,51 @@ internal class Program
             // }
             // return true;
         }
-    
-// Use the TestDict from the earlier example or make your own
-// This should print true
-Console.WriteLine(FindKey(TestDict, "RealName"));
-// This should print false
-Console.WriteLine(FindKey(TestDict, "Name"));
 
-    }      
-}
+        // Use the TestDict from the earlier example or make your own
+        // This should print true
+        Console.WriteLine(FindKey(TestDict, "RealName"));
+        // This should print false
+        Console.WriteLine(FindKey(TestDict, "Name"));
+
+    
+
+
+
+
+// static Dictionary<string, int> GenerateDictionary(List<string> Names, List<int> Numbers)
+// {
+
+//     foreach (var key in Names)
+//     {
+//         foreach (var value in Numbers) {
+//             Console.WriteLine(key + ":" + value);
+
+//         }
+//     }
+
+
+//     Dictionary<string, int> test = new Dictionary<string,int>();
+//     return test;
+// }
+// List<string> Names = new List<string>();
+// Names.Add("Julie");
+// Names.Add("Harold");
+// Names.Add("James");
+// Names.Add("Monica");
+
+// List<int> Numbers = new List<int>();
+// Numbers.Add(6);
+// Numbers.Add(12);
+// Numbers.Add(7);
+// Numbers.Add(10);
+
+// Console.WriteLine(GenerateDictionary(Names, Numbers));
+// // We've shown several examples of how to set your tests up properly, it's your turn to set it up!
+// // Your test code here
+
+//     }
+// }
 
 // 8. Generate a Dictionary
 
@@ -163,11 +200,21 @@ Console.WriteLine(FindKey(TestDict, "Name"));
 //	"Monica": 10
 // } 
 
-static Dictionary<string,int> GenerateDictionary(List<string> Names, List<int> Numbers)
+Dictionary<string,int> GenerateDictionary=new Dictionary<string, int>();
+
+GenerateDictionary.Add("Julie",6);
+GenerateDictionary.Add("Harold",12);
+GenerateDictionary.Add("James",7);
+GenerateDictionary.Add("Monica",10);
 {
-    // Your code here
+
+foreach(KeyValuePair<string,int> entry in GenerateDictionary)
+{
+    Console.WriteLine($"{entry.Key}:{entry.Value}");
+}
+}
+Console.WriteLine(GenerateDictionary);
+    }
 }
 // We've shown several examples of how to set your tests up properly, it's your turn to set it up!
 // Your test code here
-
-
